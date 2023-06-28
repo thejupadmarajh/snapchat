@@ -1,0 +1,52 @@
+INFO  2023-03-26 19:53:41.364 +0530 main : com.tableau.oauth.core.ParentProcessMonitor - Starting to monitor parent process pid: 3280
+INFO  2023-03-26 19:53:41.366 +0530 main : com.tableau.OAuthServiceMain - OAuthProvider Server starting.
+INFO  2023-03-26 19:53:43.055 +0530 main : com.tableau.OAuthServiceMain - Starting OAuthServiceMain using Java 11.0.16 on DESKTOP-FP656EM with PID 3604 (C:\Program Files\Tableau\Tableau Public 2022.3\bin\oauthservice.jar started by Dell in C:\Users\Dell\AppData\Local\Temp\TableauTemp)
+INFO  2023-03-26 19:53:43.057 +0530 main : com.tableau.OAuthServiceMain - No active profile set, falling back to 1 default profile: "default"
+INFO  2023-03-26 19:53:46.894 +0530 main : com.tableau.grpc.OAuthLibraryGrpcServer - OAuthProviderService started, listening on 59464.
+INFO  2023-03-26 19:53:47.828 +0530 main : com.tableau.OAuthServiceMain - Started OAuthServiceMain in 5.915 seconds (JVM running for 10.836)
+INFO  2023-03-26 19:53:48.039 +0530 grpc-default-executor-0 : com.tableau.oauth.grpc.OAuthV1GrpcAdapter - Calling into initialAuthorization call
+INFO  2023-03-26 19:53:48.041 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - Getting the configuration for oauthConfig: salesforce
+INFO  2023-03-26 19:53:48.042 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - Using loopback host: localhost
+INFO  2023-03-26 19:53:48.042 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - Start code receiver on a default fixed port.
+INFO  2023-03-26 19:53:48.096 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.SalesforceOAuthRequestor - Setting up the request url for Salesforce.
+INFO  2023-03-26 19:53:48.097 +0530 grpc-default-executor-0 : com.tableau.oauth.utils.parsers.ClientConfigurationParser - Detected we are not going to be using the override value from the config.
+INFO  2023-03-26 19:53:48.097 +0530 grpc-default-executor-0 : com.tableau.oauth.utils.parsers.ClientConfigurationParser - No client id is passed into oauth service, get it from oauth config.
+INFO  2023-03-26 19:53:48.137 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - The parsed redirect uri is: http://localhost:55555/Callback
+INFO  2023-03-26 19:53:48.137 +0530 grpc-default-executor-0 : com.tableau.oauth.utils.parsers.ClientConfigurationParser - No scopes passed into the oauth request, will retrieve scopes from the oauth config.
+INFO  2023-03-26 19:53:48.138 +0530 grpc-default-executor-0 : com.tableau.oauth.utils.parsers.ClientConfigurationParser - Using scopes that were retrieved from oauth config: [api, id, refresh_token]
+INFO  2023-03-26 19:53:48.138 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - State is required for the OAuth request, generating state now.
+INFO  2023-03-26 19:53:48.141 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - PKCE is required for this connector, generating PKCE values for request.
+INFO  2023-03-26 19:53:48.160 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - url returned: https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKujpKct2zVtFKB4z1s6fJD9ldGduoNCF61M6pbyxnThg1GfoH7KDh9Raqkt7QT_al6rw3RmO&code_challenge=D4fPnqFrmGEuFaw_sW3yQCvpRj0LZp-jwa4gt7zuJm4&code_challenge_method=S256&redirect_uri=http://localhost:55555/Callback&response_type=code&scope=api%20id%20refresh_token&state=khqphdncpkoksmddhj7q2174ha
+INFO  2023-03-26 19:53:48.477 +0530 grpc-default-executor-0 : com.tableau.oauth.utils.LoadBrowserHelper - Browsing is available.
+INFO  2023-03-26 19:53:48.477 +0530 grpc-default-executor-0 : com.tableau.oauth.utils.LoadBrowserHelper - Sending browser to: https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKujpKct2zVtFKB4z1s6fJD9ldGduoNCF61M6pbyxnThg1GfoH7KDh9Raqkt7QT_al6rw3RmO&code_challenge=D4fPnqFrmGEuFaw_sW3yQCvpRj0LZp-jwa4gt7zuJm4&code_challenge_method=S256&redirect_uri=http://localhost:55555/Callback&response_type=code&scope=api%20id%20refresh_token&state=khqphdncpkoksmddhj7q2174ha&prompt=login%20consent
+INFO  2023-03-26 19:54:01.878 +0530 grpc-default-executor-1 : com.tableau.oauth.grpc.OAuthV1GrpcAdapter - Received request to cancel the current authentication login.
+INFO  2023-03-26 19:54:01.879 +0530 grpc-default-executor-1 : com.tableau.oauth.requestors.BaseOAuthRequestor - Cancel login.
+WARN  2023-03-26 19:54:01.879 +0530 grpc-default-executor-0 : com.tableau.oauth.utils.receivers.GenericOAuthReceiver - Operation interrupted, throwing timeout error.
+ERROR 2023-03-26 19:54:01.879 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - Received TimeoutException: java.util.concurrent.TimeoutException: Stopping server... rethrowing as IOException.
+INFO  2023-03-26 19:54:01.881 +0530 grpc-default-executor-0 : com.tableau.oauth.requestors.BaseOAuthRequestor - Stopping the receiver.
+INFO  2023-03-26 19:54:01.881 +0530 grpc-default-executor-1 : com.tableau.oauth.requestors.BaseOAuthRequestor - Cancelled the login flow.
+INFO  2023-03-26 19:54:01.881 +0530 grpc-default-executor-1 : com.tableau.oauth.grpc.OAuthV1GrpcAdapter - Altering the response observer that the call is completed
+ERROR 2023-03-26 19:54:01.883 +0530 grpc-default-executor-0 : com.tableau.oauth.service.OAuthService - Exception thrown while attempting to get the oauth tokens: java.io.IOException: java.util.concurrent.TimeoutException: Stopping server...
+ERROR 2023-03-26 19:54:01.883 +0530 grpc-default-executor-0 : com.tableau.oauth.service.OAuthService - Authorization request timed out. The user may have closed the browser or cancelled the request.
+java.io.IOException: java.util.concurrent.TimeoutException: Stopping server...
+	at com.tableau.oauth.requestors.BaseOAuthRequestor.getOAuthTokens(BaseOAuthRequestor.java:125) ~[oauth-service-impl-20223.0.6-jre8.rel.jar!/:?]
+	at com.tableau.oauth.service.OAuthService.initialAuthorization(OAuthService.java:102) ~[oauth-service-impl-20223.0.6-jre8.rel.jar!/:?]
+	at com.tableau.oauth.grpc.OAuthV1GrpcAdapter.initialAuthorization(OAuthV1GrpcAdapter.java:44) ~[oauth-service-impl-20223.0.6-jre8.rel.jar!/:?]
+	at com.tableau.connect.generated.OAuthServiceGrpc$MethodHandlers.invoke(OAuthServiceGrpc.java:976) ~[classes!/:?]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:180) ~[grpc-stub-1.32.1.jar!/:1.32.1]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) ~[grpc-api-1.32.1.jar!/:1.32.1]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) ~[grpc-api-1.32.1.jar!/:1.32.1]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) ~[grpc-api-1.32.1.jar!/:1.32.1]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) ~[grpc-api-1.32.1.jar!/:1.32.1]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) ~[grpc-core-1.32.1.jar!/:1.32.1]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814) ~[grpc-core-1.32.1.jar!/:1.32.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.32.1.jar!/:1.32.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.32.1.jar!/:1.32.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+Caused by: java.util.concurrent.TimeoutException: Stopping server...
+	at com.tableau.oauth.utils.receivers.GenericOAuthReceiver.waitForResponse(GenericOAuthReceiver.java:171) ~[oauth-service-impl-20223.0.6-jre8.rel.jar!/:?]
+	at com.tableau.oauth.requestors.BaseOAuthRequestor.getOAuthTokens(BaseOAuthRequestor.java:113) ~[oauth-service-impl-20223.0.6-jre8.rel.jar!/:?]
+	... 15 more
+WARN  2023-03-26 19:54:01.890 +0530 grpc-default-executor-1 : io.grpc.internal.ServerCallImpl - Cancelling the stream with status Status{code=INTERNAL, description=Completed without a response, cause=null}
